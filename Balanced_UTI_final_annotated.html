@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
-<title>Balanced UTI data set</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>Balanced_UTI_final_annotated</title>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 <style type="text/css">
@@ -11,8 +13,8 @@
 *
 */
 /*!
- * Bootstrap v3.3.7 (http://getbootstrap.com)
- * Copyright 2011-2016 Twitter, Inc.
+ * Bootstrap v3.3.6 (http://getbootstrap.com)
+ * Copyright 2011-2015 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
@@ -1107,6 +1109,7 @@ a:focus {
   text-decoration: underline;
 }
 a:focus {
+  outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
@@ -2535,6 +2538,7 @@ select[size] {
 input[type="file"]:focus,
 input[type="radio"]:focus,
 input[type="checkbox"]:focus {
+  outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
@@ -3025,6 +3029,7 @@ select[multiple].input-lg {
 .btn.focus,
 .btn:active.focus,
 .btn.active.focus {
+  outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
@@ -8755,9 +8760,6 @@ body > #header .header-bar {
     margin-left: 10px;
   }
 }
-[dir="rtl"] #ipython_notebook {
-  float: right !important;
-}
 #noscript {
   width: auto;
   padding-top: 16px;
@@ -8960,14 +8962,8 @@ span#login_widget > .button .badge,
  *
  * Author: Jupyter Development Team
  */
-[dir="rtl"] #tabs li {
-  float: right;
-}
 ul#tabs {
   margin-bottom: 4px;
-}
-[dir="rtl"] ul#tabs {
-  margin-right: 0px;
 }
 ul#tabs a {
   padding-top: 6px;
@@ -8990,16 +8986,6 @@ ul.breadcrumb span {
 }
 .list_toolbar .tree-buttons {
   padding-top: 1px;
-}
-[dir="rtl"] .list_toolbar .tree-buttons {
-  float: left !important;
-}
-[dir="rtl"] .list_toolbar .pull-right {
-  padding-top: 1px;
-  float: left !important;
-}
-[dir="rtl"] .list_toolbar .pull-left {
-  float: right !important;
 }
 .dynamic-buttons {
   padding-top: 3px;
@@ -9136,9 +9122,6 @@ ul.breadcrumb span {
 #tree-selector {
   padding-right: 0px;
 }
-[dir="rtl"] #tree-selector a {
-  float: right;
-}
 #button-select-all {
   min-width: 50px;
 }
@@ -9228,9 +9211,6 @@ ul#new-menu {
   left: auto;
   right: 0;
 }
-[dir="rtl"] #new-menu {
-  text-align: right;
-}
 .kernel-menu-icon {
   padding-right: 12px;
   width: 24px;
@@ -9275,9 +9255,6 @@ ul#new-menu {
 }
 #running .panel-group .panel .panel-body .list_container .list_item:last-child {
   border-bottom: 0px;
-}
-[dir="rtl"] #running .col-sm-8 {
-  float: right !important;
 }
 .delete-button {
   display: none;
@@ -9574,7 +9551,6 @@ div.cell.selected.jupyter-soft-selected {
   }
 }
 div.inner_cell {
-  min-width: 0;
   /* Old browsers */
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -9595,6 +9571,11 @@ div.inner_cell {
   box-flex: 1;
   /* Modern browsers */
   flex: 1;
+}
+@-moz-document url-prefix() {
+  div.inner_cell {
+    overflow-x: hidden;
+  }
 }
 /* input_area and input_prompt must match in top border and margin for alignment */
 div.input_area {
@@ -11265,7 +11246,7 @@ div#pager .ui-resizable-handle::after {
 }
 .shortcut_key {
   display: inline-block;
-  width: 21ex;
+  width: 20ex;
   text-align: right;
   font-family: monospace;
 }
@@ -11577,7 +11558,6 @@ ul.typeahead-list > li > a {
   box-shadow: 0px 0px 12px 1px rgba(87, 87, 87, 0.2);
 }
 .terminal-app .terminal {
-  width: 100%;
   float: left;
   font-family: monospace;
   color: white;
@@ -11591,9 +11571,6 @@ ul.typeahead-list > li > a {
 .terminal-app .terminal dummy-screen {
   line-height: 1em;
   font-size: 14px;
-}
-.terminal-app .terminal .xterm-rows {
-  padding: 10px;
 }
 .terminal-app .terminal-cursor {
   color: black;
@@ -11654,10 +11631,8 @@ ul.typeahead-list > li > a {
 .highlight .mh { color: #666666 } /* Literal.Number.Hex */
 .highlight .mi { color: #666666 } /* Literal.Number.Integer */
 .highlight .mo { color: #666666 } /* Literal.Number.Oct */
-.highlight .sa { color: #BA2121 } /* Literal.String.Affix */
 .highlight .sb { color: #BA2121 } /* Literal.String.Backtick */
 .highlight .sc { color: #BA2121 } /* Literal.String.Char */
-.highlight .dl { color: #BA2121 } /* Literal.String.Delimiter */
 .highlight .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
 .highlight .s2 { color: #BA2121 } /* Literal.String.Double */
 .highlight .se { color: #BB6622; font-weight: bold } /* Literal.String.Escape */
@@ -11668,11 +11643,9 @@ ul.typeahead-list > li > a {
 .highlight .s1 { color: #BA2121 } /* Literal.String.Single */
 .highlight .ss { color: #19177C } /* Literal.String.Symbol */
 .highlight .bp { color: #008000 } /* Name.Builtin.Pseudo */
-.highlight .fm { color: #0000FF } /* Name.Function.Magic */
 .highlight .vc { color: #19177C } /* Name.Variable.Class */
 .highlight .vg { color: #19177C } /* Name.Variable.Global */
 .highlight .vi { color: #19177C } /* Name.Variable.Instance */
-.highlight .vm { color: #19177C } /* Name.Variable.Magic */
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
     </style>
 <style type="text/css">
@@ -11726,7 +11699,9 @@ body {
 div#notebook {
   overflow: visible;
   border-top: none;
-}@media print {
+}
+
+@media print {
   div.cell {
     display: block;
     page-break-inside: avoid;
@@ -11747,7 +11722,7 @@ div#notebook {
 
 <!-- Loading mathjax macro -->
 <!-- Load mathjax -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML"></script>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
     <!-- MathJax configuration -->
     <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
@@ -11788,7 +11763,8 @@ div#notebook {
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -11830,7 +11806,8 @@ bit.ly/Sheila_Adams-Sapper_demo</p>
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -11855,11 +11832,7 @@ bit.ly/Sheila_Adams-Sapper_demo</p>
 <div class="output">
 
 
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[65]:</div>
-
-
+<div class="output_area"><div class="prompt output_prompt">Out[65]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
@@ -11933,7 +11906,8 @@ Name: ua_spec_grav, Length: 109, dtype: int64</pre>
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -11972,11 +11946,7 @@ Name: ua_spec_grav, Length: 109, dtype: int64</pre>
 <div class="output">
 
 
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[70]:</div>
-
-
+<div class="output_area"><div class="prompt output_prompt">Out[70]:</div>
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
@@ -12073,11 +12043,7 @@ Name: ua_spec_grav, Length: 109, dtype: int64</pre>
 <div class="output">
 
 
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[77]:</div>
-
-
+<div class="output_area"><div class="prompt output_prompt">Out[77]:</div>
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
@@ -12182,7 +12148,8 @@ Name: ua_spec_grav, Length: 109, dtype: int64</pre>
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12205,7 +12172,8 @@ Name: ua_spec_grav, Length: 109, dtype: int64</pre>
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12231,11 +12199,7 @@ Name: ua_spec_grav, Length: 109, dtype: int64</pre>
 <div class="output">
 
 
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
+<div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>C:\ProgramData\Anaconda2\lib\site-packages\ipykernel_launcher.py:3: UserWarning: Boolean Series key will be reindexed to match DataFrame index.
   This is separate from the ipykernel package so we can avoid doing imports until
@@ -12263,11 +12227,7 @@ Name: ua_spec_grav, Length: 109, dtype: int64</pre>
 <div class="output">
 
 
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[85]:</div>
-
-
+<div class="output_area"><div class="prompt output_prompt">Out[85]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
@@ -12280,7 +12240,8 @@ Name: ua_spec_grav, Length: 109, dtype: int64</pre>
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12306,11 +12267,7 @@ Name: ua_spec_grav, Length: 109, dtype: int64</pre>
 <div class="output">
 
 
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[86]:</div>
-
-
+<div class="output_area"><div class="prompt output_prompt">Out[86]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
@@ -12323,7 +12280,8 @@ Name: ua_spec_grav, Length: 109, dtype: int64</pre>
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12373,11 +12331,7 @@ Name: ua_spec_grav, Length: 109, dtype: int64</pre>
 <div class="output">
 
 
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
+<div class="output_area"><div class="prompt"></div>
 
 
 <div class="output_png output_subarea ">
@@ -12566,11 +12520,7 @@ rCVJkqQOmFhLkiRJHTCxliRJkjpgYi1JkiR14P8D3AAkQTBkkwcAAAAASUVORK5CYII=
 <div class="output">
 
 
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
+<div class="output_area"><div class="prompt"></div>
 
 
 <div class="output_png output_subarea ">
@@ -12805,7 +12755,8 @@ ZmalcXFpZmZmZqVxcWlmZmZmpfn/ySQLRpFt/O0AAAAASUVORK5CYII=
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12831,11 +12782,7 @@ ZmalcXFpZmZmZqVxcWlmZmZmpfn/ySQLRpFt/O0AAAAASUVORK5CYII=
 <div class="output">
 
 
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[5]:</div>
-
-
+<div class="output_area"><div class="prompt output_prompt">Out[5]:</div>
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
@@ -12903,11 +12850,7 @@ ZmalcXFpZmZmZqVxcWlmZmZmpfn/ySQLRpFt/O0AAAAASUVORK5CYII=
 <div class="output">
 
 
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[90]:</div>
-
-
+<div class="output_area"><div class="prompt output_prompt">Out[90]:</div>
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
@@ -13036,7 +12979,8 @@ ZmalcXFpZmZmZqVxcWlmZmZmpfn/ySQLRpFt/O0AAAAASUVORK5CYII=
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13063,11 +13007,7 @@ ZmalcXFpZmZmZqVxcWlmZmZmpfn/ySQLRpFt/O0AAAAASUVORK5CYII=
 <div class="output">
 
 
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
+<div class="output_area"><div class="prompt"></div>
 
 
 <div class="output_png output_subarea ">
@@ -13236,7 +13176,8 @@ AABJRU5ErkJggg==
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13261,11 +13202,7 @@ AABJRU5ErkJggg==
 <div class="output">
 
 
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
+<div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>(0.7187246031316031, 0.2691390800238392)
 </pre>
@@ -13293,11 +13230,7 @@ AABJRU5ErkJggg==
 <div class="output">
 
 
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[96]:</div>
-
-
+<div class="output_area"><div class="prompt output_prompt">Out[96]:</div>
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
@@ -13366,11 +13299,7 @@ AABJRU5ErkJggg==
 <div class="output">
 
 
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[97]:</div>
-
-
+<div class="output_area"><div class="prompt output_prompt">Out[97]:</div>
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
@@ -13422,7 +13351,8 @@ AABJRU5ErkJggg==
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13453,11 +13383,7 @@ AABJRU5ErkJggg==
 <div class="output">
 
 
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
+<div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>C:\ProgramData\Anaconda2\lib\site-packages\sklearn\cross_validation.py:41: DeprecationWarning: This module was deprecated in version 0.18 in favor of the model_selection module into which all the refactored classes and functions are moved. Also note that the interface of the new CV iterators are different from that of this module. This module will be removed in 0.20.
   &#34;This module will be removed in 0.20.&#34;, DeprecationWarning)
@@ -13469,7 +13395,8 @@ AABJRU5ErkJggg==
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13519,22 +13446,14 @@ set the C regularization parameter very high so it does not apply weighting for 
 <div class="output">
 
 
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
+<div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Optimal number of features : 94
 </pre>
 </div>
 </div>
 
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
+<div class="output_area"><div class="prompt"></div>
 
 
 <div class="output_png output_subarea ">
@@ -13785,11 +13704,7 @@ ZmY1ObMwM7Oa/n8YK/dQJRhpTQAAAABJRU5ErkJggg==
 <div class="output">
 
 
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[53]:</div>
-
-
+<div class="output_area"><div class="prompt output_prompt">Out[53]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
@@ -13807,7 +13722,8 @@ ZmY1ObMwM7Oa/n8YK/dQJRhpTQAAAABJRU5ErkJggg==
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13830,7 +13746,8 @@ ZmY1ObMwM7Oa/n8YK/dQJRhpTQAAAABJRU5ErkJggg==
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13862,11 +13779,7 @@ ZmY1ObMwM7Oa/n8YK/dQJRhpTQAAAABJRU5ErkJggg==
 <div class="output">
 
 
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
+<div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>[False False False False False False False False False False False False
  False False False False False False False False False False False False
@@ -13927,11 +13840,7 @@ ZmY1ObMwM7Oa/n8YK/dQJRhpTQAAAABJRU5ErkJggg==
 <div class="output">
 
 
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[50]:</div>
-
-
+<div class="output_area"><div class="prompt output_prompt">Out[50]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
@@ -13964,11 +13873,7 @@ ZmY1ObMwM7Oa/n8YK/dQJRhpTQAAAABJRU5ErkJggg==
 <div class="output">
 
 
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[51]:</div>
-
-
+<div class="output_area"><div class="prompt output_prompt">Out[51]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
@@ -13996,7 +13901,8 @@ ZmY1ObMwM7Oa/n8YK/dQJRhpTQAAAABJRU5ErkJggg==
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14024,11 +13930,7 @@ ZmY1ObMwM7Oa/n8YK/dQJRhpTQAAAABJRU5ErkJggg==
 <div class="output">
 
 
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[9]:</div>
-
-
+<div class="output_area"><div class="prompt output_prompt">Out[9]:</div>
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
@@ -14205,7 +14107,8 @@ ZmY1ObMwM7Oa/n8YK/dQJRhpTQAAAABJRU5ErkJggg==
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14214,7 +14117,8 @@ ZmY1ObMwM7Oa/n8YK/dQJRhpTQAAAABJRU5ErkJggg==
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14270,11 +14174,7 @@ ZmY1ObMwM7Oa/n8YK/dQJRhpTQAAAABJRU5ErkJggg==
 <div class="output">
 
 
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[45]:</div>
-
-
+<div class="output_area"><div class="prompt output_prompt">Out[45]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
@@ -14283,11 +14183,7 @@ ZmY1ObMwM7Oa/n8YK/dQJRhpTQAAAABJRU5ErkJggg==
 
 </div>
 
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
+<div class="output_area"><div class="prompt"></div>
 
 
 <div class="output_png output_subarea ">
@@ -14647,11 +14543,7 @@ pIJzZi9JUsEZ9pIkFZxhL0lSwRn2kiQVnGEvSVLB/S/jKdpODsDYNgAAAABJRU5ErkJggg==
 <div class="output">
 
 
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
+<div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>[[ 0.          0.          0.          0.40104411  0.          0.          0.
    0.          0.          0.          0.          0.          0.          0.
@@ -14697,7 +14589,8 @@ pIJzZi9JUsEZ9pIkFZxhL0lSwRn2kiQVnGEvSVLB/S/jKdpODsDYNgAAAABJRU5ErkJggg==
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14724,11 +14617,7 @@ pIJzZi9JUsEZ9pIkFZxhL0lSwRn2kiQVnGEvSVLB/S/jKdpODsDYNgAAAABJRU5ErkJggg==
 <div class="output">
 
 
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
+<div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>abx
 VITAMINS
@@ -14782,7 +14671,8 @@ insurance_status_Medicare
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14810,11 +14700,7 @@ insurance_status_Medicare
 <div class="output">
 
 
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
+<div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>C:\ProgramData\Anaconda2\lib\site-packages\statsmodels\compat\pandas.py:56: FutureWarning: The pandas.core.datetools module is deprecated and will be removed in a future version. Please use the pandas.tseries module instead.
   from pandas.core import datetools
@@ -14822,11 +14708,7 @@ insurance_status_Medicare
 </div>
 </div>
 
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
+<div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Optimization terminated successfully.
          Current function value: 0.477880
@@ -14887,11 +14769,7 @@ insurance_status_Medicare     0.2345      0.045      5.218      0.000       0.14
 <div class="output">
 
 
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
+<div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>10-fold cross validation average accuracy: 0.768
 </pre>
@@ -14902,7 +14780,8 @@ insurance_status_Medicare     0.2345      0.045      5.218      0.000       0.14
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14933,11 +14812,7 @@ insurance_status_Medicare     0.2345      0.045      5.218      0.000       0.14
 <div class="output">
 
 
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[22]:</div>
-
-
+<div class="output_area"><div class="prompt output_prompt">Out[22]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
@@ -14963,7 +14838,8 @@ insurance_status_Medicare     0.2345      0.045      5.218      0.000       0.14
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14992,11 +14868,7 @@ insurance_status_Medicare     0.2345      0.045      5.218      0.000       0.14
 <div class="output">
 
 
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
+<div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>(array([ 0.]), array([[ 0.4037955 ,  0.05368838, -0.21863883, -0.58107536,  0.49028412,
         -1.37994119, -0.04859236,  1.22174261,  0.1744266 ,  0.29376122,
@@ -15026,11 +14898,7 @@ insurance_status_Medicare     0.2345      0.045      5.218      0.000       0.14
 <div class="output">
 
 
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
+<div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Accuracy of logistic regression classifier on test set: 0.77
 </pre>
@@ -15059,11 +14927,7 @@ insurance_status_Medicare     0.2345      0.045      5.218      0.000       0.14
 <div class="output">
 
 
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
+<div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>[[2205  778]
  [ 557 2367]]
@@ -15092,11 +14956,7 @@ insurance_status_Medicare     0.2345      0.045      5.218      0.000       0.14
 <div class="output">
 
 
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[31]:</div>
-
-
+<div class="output_area"><div class="prompt output_prompt">Out[31]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
@@ -15127,11 +14987,7 @@ insurance_status_Medicare     0.2345      0.045      5.218      0.000       0.14
 <div class="output">
 
 
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
+<div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>             precision    recall  f1-score   support
 
@@ -15148,7 +15004,8 @@ avg / total       0.78      0.77      0.77      5907
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -15176,11 +15033,7 @@ avg / total       0.78      0.77      0.77      5907
 <div class="output">
 
 
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[33]:</div>
-
-
+<div class="output_area"><div class="prompt output_prompt">Out[33]:</div>
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
@@ -15375,11 +15228,7 @@ avg / total       0.78      0.77      0.77      5907
 <div class="output">
 
 
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[34]:</div>
-
-
+<div class="output_area"><div class="prompt output_prompt">Out[34]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
@@ -15392,7 +15241,8 @@ avg / total       0.78      0.77      0.77      5907
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -15419,11 +15269,7 @@ X_final_test.to_csv('x_test_l1_final.tsv', sep = '\t')</p>
 <div class="output">
 
 
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
+<div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Accuracy of logistic regression classifier on test set: 0.76
 </pre>
@@ -15452,11 +15298,7 @@ X_final_test.to_csv('x_test_l1_final.tsv', sep = '\t')</p>
 <div class="output">
 
 
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
+<div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>[[2728 1001]
  [ 744 2910]]
@@ -15485,11 +15327,7 @@ X_final_test.to_csv('x_test_l1_final.tsv', sep = '\t')</p>
 <div class="output">
 
 
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[39]:</div>
-
-
+<div class="output_area"><div class="prompt output_prompt">Out[39]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
@@ -15520,11 +15358,7 @@ X_final_test.to_csv('x_test_l1_final.tsv', sep = '\t')</p>
 <div class="output">
 
 
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
+<div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>             precision    recall  f1-score   support
 
@@ -15541,7 +15375,8 @@ avg / total       0.77      0.76      0.76      7383
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -15576,11 +15411,7 @@ avg / total       0.77      0.76      0.76      7383
 <div class="output">
 
 
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
+<div class="output_area"><div class="prompt"></div>
 
 
 <div class="output_png output_subarea ">
@@ -15969,11 +15800,7 @@ AElFTkSuQmCC
 <div class="output">
 
 
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
+<div class="output_area"><div class="prompt"></div>
 
 
 <div class="output_png output_subarea ">
@@ -16502,7 +16329,8 @@ QmCC
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -16514,8 +16342,4 @@ QmCC
     </div>
   </div>
 </body>
-
- 
-
-
 </html>
